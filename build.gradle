@@ -15,11 +15,10 @@ buildscript {
         // in the individual module build.gradle files
     }
 
-    ext.build_tools_version = '28.0.3'
-    ext.support_version = '28.0.0'
+    ext.build_tools_version = '30.0.3'
     ext.min_sdk_version = '22'
-    ext.butterknife_version = '8.8.1'
-    ext.compile_sdk_version = 28
+    ext.compile_sdk_version = 30
+    ext.target_sdk_version = 30
 }
 
 allprojects {
