@@ -5,67 +5,69 @@ import android.content.Intent;
 
 public class CrashReporter {
 
-    private static Context applicationContext;
+  private static Context applicationContext;
 
-    private static String crashReportPath;
+  private static String crashReportPath;
 
-    private static boolean isNotificationEnabled = true;
+  private static boolean isNotificationEnabled = true;
 
-    private CrashReporter() {
-        // This class in not publicly instantiable
+  private CrashReporter() {
+    // This class in not publicly instantiable
+  }
+
+  public static void initialize(Context context) {
+    applicationContext = context;
+    setUpExceptionHandler();
+  }
+
+  public static void initialize(Context context, String crashReportSavePath) {
+    applicationContext = context;
+    crashReportPath = crashReportSavePath;
+    setUpExceptionHandler();
+  }
+
+  private static void setUpExceptionHandler() {
+    if (!(Thread.getDefaultUncaughtExceptionHandler() instanceof CrashReporterExceptionHandler)) {
+      Thread.setDefaultUncaughtExceptionHandler(new CrashReporterExceptionHandler());
     }
+  }
 
-    public static void initialize(Context context) {
-        applicationContext = context;
-        setUpExceptionHandler();
+  static Context getContext() {
+    if (applicationContext == null) {
+      try {
+        throw new CrashReporterNotInitializedException(
+            "Initialize CrashReporter : call CrashReporter.initialize(context, crashReportPath)");
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
+    return applicationContext;
+  }
 
-    public static void initialize(Context context, String crashReportSavePath) {
-        applicationContext = context;
-        crashReportPath = crashReportSavePath;
-        setUpExceptionHandler();
-    }
+  static String getCrashReportPath() {
+    return crashReportPath;
+  }
 
-    private static void setUpExceptionHandler() {
-        if (!(Thread.getDefaultUncaughtExceptionHandler() instanceof CrashReporterExceptionHandler)) {
-            Thread.setDefaultUncaughtExceptionHandler(new CrashReporterExceptionHandler());
-        }
-    }
+  public static boolean isNotificationEnabled() {
+    return isNotificationEnabled;
+  }
 
-      static Context getContext() {
-        if (applicationContext == null) {
-            try {
-                throw new CrashReporterNotInitializedException("Initialize CrashReporter : call CrashReporter.initialize(context, crashReportPath)");
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        return applicationContext;
-    }
+  // LOG Exception APIs
+  public static void logException(Throwable throwable) {
+    CrashUtil.logException(throwable);
+  }
 
-      static String getCrashReportPath() {
-        return crashReportPath;
-    }
+  static Intent getLaunchIntent() {
+    return new Intent(applicationContext, CrashReporterActivity.class)
+        .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+  }
 
-    public static boolean isNotificationEnabled() {
-        return isNotificationEnabled;
-    }
+  public static void disableNotification() {
+    isNotificationEnabled = false;
+  }
 
-    //LOG Exception APIs
-    public static void logException(Throwable throwable) {
-        CrashUtil.logException(throwable);
-    }
-
-      static Intent getLaunchIntent() {
-        return new Intent(applicationContext, CrashReporterActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-    }
-
-    public static void disableNotification() {
-        isNotificationEnabled = false;
-    }
-
-    public static void launch(Context context) {
-        Intent intent =  new Intent(context, CrashReporterActivity.class);
-        context.startActivity(intent);
-    }
+  public static void launch(Context context) {
+    Intent intent = new Intent(context, CrashReporterActivity.class);
+    context.startActivity(intent);
+  }
 }
