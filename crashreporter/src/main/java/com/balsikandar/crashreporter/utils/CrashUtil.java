@@ -49,7 +49,7 @@ public class CrashUtil {
         showNotification(throwable.getLocalizedMessage(), true);
     }
 
-    public static void logException(final Exception exception) {
+    public static void logException(final Throwable throwable) {
 
         new Thread(new Runnable() {
             @Override
@@ -57,9 +57,9 @@ public class CrashUtil {
 
                 String crashReportPath = CrashReporter.getCrashReportPath();
                 final String filename = getCrashLogTime() + Constants.EXCEPTION_SUFFIX + Constants.FILE_EXTENSION;
-                writeToFile(crashReportPath, filename, getStackTrace(exception));
+                writeToFile(crashReportPath, filename, getStackTrace(throwable));
 
-                showNotification(exception.getLocalizedMessage(), false);
+                showNotification(throwable.getLocalizedMessage(), false);
             }
         }).start();
     }

@@ -9,7 +9,7 @@ public class CrashReporter {
 
   }
 
-  public static void logException(Exception e) {
+  public static void logException(Throwable e) {
 
   }
 

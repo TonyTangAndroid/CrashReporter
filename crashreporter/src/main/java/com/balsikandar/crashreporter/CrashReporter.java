@@ -57,8 +57,8 @@ public class CrashReporter {
     }
 
     //LOG Exception APIs
-    public static void logException(Exception exception) {
-        CrashUtil.logException(exception);
+    public static void logException(Throwable throwable) {
+        CrashUtil.logException(throwable);
     }
 
     public static Intent getLaunchIntent() {
