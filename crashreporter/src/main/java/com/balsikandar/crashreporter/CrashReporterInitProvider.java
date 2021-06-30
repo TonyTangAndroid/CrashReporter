@@ -9,7 +9,7 @@ import android.database.Cursor;
 import android.net.Uri;
 
 /** Created by amitshekhar on 16/11/16. */
-class CrashReporterInitProvider extends ContentProvider {
+public class CrashReporterInitProvider extends ContentProvider {
 
   public CrashReporterInitProvider() {}
 
