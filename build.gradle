@@ -10,9 +10,8 @@ buildscript {
         classpath 'com.android.tools.build:gradle:4.2.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
+        //noinspection GradleDependency
+        classpath 'gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.8'
     }
 
     ext.build_tools_version = '30.0.3'
@@ -22,11 +21,7 @@ buildscript {
 }
 
 
-
-plugins {
-    id "com.github.sherter.google-java-format" version "0.8"
-}
-
+apply plugin: 'com.github.sherter.google-java-format'
 apply from: "${rootDir}/config/google_java_format.gradle"
 
 
