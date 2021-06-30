@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.utils;
+package com.balsikandar.crashreporter;
 
 import android.Manifest;
 import android.accounts.Account;

@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.ui;
+package com.balsikandar.crashreporter;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,8 +10,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.balsikandar.crashreporter.R;
-import com.balsikandar.crashreporter.utils.AppUtils;
-import com.balsikandar.crashreporter.utils.FileUtils;
+import com.balsikandar.crashreporter.AppUtils;
+import com.balsikandar.crashreporter.FileUtils;
 
 import java.io.File;
 

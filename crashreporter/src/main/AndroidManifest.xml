@@ -13,14 +13,14 @@
             android:exported="false" />
 
         <activity
-            android:name=".ui.CrashReporterActivity"
+            android:name=".CrashReporterActivity"
             android:launchMode="singleTask"
             android:taskAffinity="com.balsikandar.android.task"
             android:theme="@style/CrashReporter.Theme" />
 
         <activity
-            android:name=".ui.LogMessageActivity"
-            android:parentActivityName=".ui.CrashReporterActivity"
+            android:name=".LogMessageActivity"
+            android:parentActivityName=".CrashReporterActivity"
             android:theme="@style/CrashReporter.Theme" />
     </application>
 

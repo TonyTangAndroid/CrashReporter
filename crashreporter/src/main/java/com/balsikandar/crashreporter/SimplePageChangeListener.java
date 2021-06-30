@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.utils;
+package com.balsikandar.crashreporter;
 
 import androidx.viewpager.widget.ViewPager;
 

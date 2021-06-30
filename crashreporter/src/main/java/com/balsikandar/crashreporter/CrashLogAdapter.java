@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.adapter;
+package com.balsikandar.crashreporter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.balsikandar.crashreporter.R;
-import com.balsikandar.crashreporter.ui.LogMessageActivity;
-import com.balsikandar.crashreporter.utils.FileUtils;
+import com.balsikandar.crashreporter.LogMessageActivity;
+import com.balsikandar.crashreporter.FileUtils;
 
 import java.io.File;
 import java.util.ArrayList;

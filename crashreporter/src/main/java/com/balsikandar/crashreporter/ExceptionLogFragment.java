@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.ui;
+package com.balsikandar.crashreporter;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -10,12 +10,6 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.balsikandar.crashreporter.CrashReporter;
-import com.balsikandar.crashreporter.R;
-import com.balsikandar.crashreporter.adapter.CrashLogAdapter;
-import com.balsikandar.crashreporter.utils.Constants;
-import com.balsikandar.crashreporter.utils.CrashUtil;
 
 import java.io.File;
 import java.util.ArrayList;

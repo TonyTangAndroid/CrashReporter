@@ -1,11 +1,11 @@
-package com.balsikandar.crashreporter.adapter;
+package com.balsikandar.crashreporter;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.balsikandar.crashreporter.ui.CrashLogFragment;
-import com.balsikandar.crashreporter.ui.ExceptionLogFragment;
+import com.balsikandar.crashreporter.CrashLogFragment;
+import com.balsikandar.crashreporter.ExceptionLogFragment;
 
 /**
  * Created by bali on 11/08/17.

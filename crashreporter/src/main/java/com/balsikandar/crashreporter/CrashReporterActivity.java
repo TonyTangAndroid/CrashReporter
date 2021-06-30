@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.ui;
+package com.balsikandar.crashreporter;
 
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -10,14 +10,6 @@ import androidx.appcompat.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.balsikandar.crashreporter.CrashReporter;
-import com.balsikandar.crashreporter.R;
-import com.balsikandar.crashreporter.adapter.MainPagerAdapter;
-import com.balsikandar.crashreporter.utils.Constants;
-import com.balsikandar.crashreporter.utils.CrashUtil;
-import com.balsikandar.crashreporter.utils.FileUtils;
-import com.balsikandar.crashreporter.utils.SimplePageChangeListener;
 
 import java.io.File;
 

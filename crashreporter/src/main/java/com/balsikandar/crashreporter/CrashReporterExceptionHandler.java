@@ -1,4 +1,4 @@
-package com.balsikandar.crashreporter.utils;
+package com.balsikandar.crashreporter;
 
 public class CrashReporterExceptionHandler implements Thread.UncaughtExceptionHandler {
 
