@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import java.io.File;
 
-class LogMessageActivity extends AppCompatActivity {
+public class LogMessageActivity extends AppCompatActivity {
 
   private TextView appInfo;
 

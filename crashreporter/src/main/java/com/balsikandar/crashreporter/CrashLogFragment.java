@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.Iterator;
 
 /** Created by bali on 11/08/17. */
-class CrashLogFragment extends Fragment {
+public class CrashLogFragment extends Fragment {
 
   private CrashLogAdapter logAdapter;
 
