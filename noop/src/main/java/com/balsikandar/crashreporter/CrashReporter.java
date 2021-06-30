@@ -1,18 +1,30 @@
 package com.balsikandar.crashreporter;
 
-import android.app.Application;
 import android.content.Context;
 
 public class CrashReporter {
 
-  public static void initialize(Context applicationContext) {
-
+  private CrashReporter() {
   }
 
-  public static void logException(Throwable e) {
-
+  public static void initialize(Context context) {
   }
 
-  public static void launch(Context activityContext) {
+  public static void initialize(Context context, String crashReportSavePath) {
+  }
+
+
+  public static boolean isNotificationEnabled() {
+    return false;
+  }
+
+  public static void logException(Throwable throwable) {
+  }
+
+
+  public static void disableNotification() {
+  }
+
+  public static void launch(Context context) {
   }
 }

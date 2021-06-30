@@ -32,7 +32,7 @@ public class CrashReporter {
         }
     }
 
-    public static Context getContext() {
+      static Context getContext() {
         if (applicationContext == null) {
             try {
                 throw new CrashReporterNotInitializedException("Initialize CrashReporter : call CrashReporter.initialize(context, crashReportPath)");
@@ -43,7 +43,7 @@ public class CrashReporter {
         return applicationContext;
     }
 
-    public static String getCrashReportPath() {
+      static String getCrashReportPath() {
         return crashReportPath;
     }
 
@@ -56,7 +56,7 @@ public class CrashReporter {
         CrashUtil.logException(throwable);
     }
 
-    public static Intent getLaunchIntent() {
+      static Intent getLaunchIntent() {
         return new Intent(applicationContext, CrashReporterActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     }
 

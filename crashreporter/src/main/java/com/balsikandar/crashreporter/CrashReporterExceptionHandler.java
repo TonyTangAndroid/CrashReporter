@@ -1,6 +1,6 @@
 package com.balsikandar.crashreporter;
 
-public class CrashReporterExceptionHandler implements Thread.UncaughtExceptionHandler {
+class CrashReporterExceptionHandler implements Thread.UncaughtExceptionHandler {
 
     private Thread.UncaughtExceptionHandler exceptionHandler;
 

@@ -24,7 +24,7 @@ import java.util.Locale;
 import static android.content.Context.NOTIFICATION_SERVICE;
 import static com.balsikandar.crashreporter.Constants.CHANNEL_NOTIFICATION_ID;
 
-public class CrashUtil {
+class CrashUtil {
 
     private static final String TAG = CrashUtil.class.getSimpleName();
 

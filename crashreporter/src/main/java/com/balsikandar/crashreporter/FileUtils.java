@@ -10,8 +10,7 @@ import java.io.IOException;
 /**
  * Created by bali on 10/08/17.
  */
-
-public class FileUtils {
+class FileUtils {
 
     public static final String TAG = FileUtils.class.getSimpleName();
 

@@ -20,8 +20,7 @@ import java.util.Iterator;
 /**
  * Created by bali on 11/08/17.
  */
-
-public class ExceptionLogFragment extends Fragment {
+class ExceptionLogFragment extends Fragment {
 
     private CrashLogAdapter logAdapter;
 

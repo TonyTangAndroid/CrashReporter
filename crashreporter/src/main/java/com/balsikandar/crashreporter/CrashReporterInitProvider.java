@@ -14,8 +14,7 @@ import android.net.Uri;
 /**
  * Created by amitshekhar on 16/11/16.
  */
-
-public class CrashReporterInitProvider extends ContentProvider {
+class CrashReporterInitProvider extends ContentProvider {
 
 
     public CrashReporterInitProvider() {

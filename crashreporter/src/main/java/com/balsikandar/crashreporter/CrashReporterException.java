@@ -7,7 +7,7 @@ package com.balsikandar.crashreporter;
 /**
  * Represents an error condition specific to the Crash Reporter for Android.
  */
-public class CrashReporterException extends RuntimeException {
+class CrashReporterException extends RuntimeException {
     static final long serialVersionUID = 1;
 
     /**

@@ -3,8 +3,7 @@ package com.balsikandar.crashreporter;
 /**
  * Created by bali on 15/08/17.
  */
-
-public class Constants {
+class Constants {
     public static final String EXCEPTION_SUFFIX = "_exception";
     public static final String CRASH_SUFFIX = "_crash";
     public static final String FILE_EXTENSION = ".txt";

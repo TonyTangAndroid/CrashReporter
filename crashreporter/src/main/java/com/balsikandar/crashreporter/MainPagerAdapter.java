@@ -4,14 +4,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.balsikandar.crashreporter.CrashLogFragment;
-import com.balsikandar.crashreporter.ExceptionLogFragment;
-
 /**
  * Created by bali on 11/08/17.
  */
-
-public class MainPagerAdapter extends FragmentPagerAdapter {
+class MainPagerAdapter extends FragmentPagerAdapter {
 
     private CrashLogFragment crashLogFragment;
     private ExceptionLogFragment exceptionLogFragment;

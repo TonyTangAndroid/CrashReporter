@@ -9,13 +9,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import com.balsikandar.crashreporter.R;
-import com.balsikandar.crashreporter.AppUtils;
-import com.balsikandar.crashreporter.FileUtils;
-
 import java.io.File;
 
-public class LogMessageActivity extends AppCompatActivity {
+class LogMessageActivity extends AppCompatActivity {
 
     private TextView appInfo;
 

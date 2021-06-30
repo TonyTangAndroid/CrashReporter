@@ -18,8 +18,7 @@ import java.util.UUID;
 /**
  * Created by bali on 12/08/17.
  */
-
-public class AppUtils {
+class AppUtils {
     private static String getCurrentLauncherApp(Context context) {
         String str = "";
         PackageManager localPackageManager = context.getPackageManager();

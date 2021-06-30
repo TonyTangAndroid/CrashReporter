@@ -7,7 +7,7 @@ package com.balsikandar.crashreporter;
 /**
  * An Exception indicating that the Crash Reporter has not been correctly initialized.
  */
-public class CrashReporterNotInitializedException extends CrashReporterException {
+class CrashReporterNotInitializedException extends CrashReporterException {
     static final long serialVersionUID = 1;
 
     /**

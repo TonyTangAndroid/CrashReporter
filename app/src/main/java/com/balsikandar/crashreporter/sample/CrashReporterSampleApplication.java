@@ -6,7 +6,6 @@ import com.balsikandar.crashreporter.CrashReporter;
 /**
  * Created by bali on 02/08/17.
  */
-
 public class CrashReporterSampleApplication extends Application {
 
     @Override

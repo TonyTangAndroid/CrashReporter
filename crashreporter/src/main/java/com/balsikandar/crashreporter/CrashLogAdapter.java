@@ -18,8 +18,7 @@ import java.util.ArrayList;
 /**
  * Created by bali on 10/08/17.
  */
-
-public class CrashLogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+class CrashLogAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private Context context;
     private ArrayList<File> crashFileList;
