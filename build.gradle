@@ -3,7 +3,8 @@
 buildscript {
     repositories {
         google()
-        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
@@ -24,7 +25,8 @@ buildscript {
 allprojects {
     repositories {
         google()
-        mavenCentral()
+        //noinspection JcenterRepositoryObsolete
+        jcenter()
     }
 }
 
