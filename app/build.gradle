@@ -23,7 +23,7 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    api 'androidx.appcompat:appcompat:1.0.0'
+    api 'androidx.appcompat:appcompat:1.3.0'
     testImplementation 'junit:junit:4.13.2'
     api project(':crashreporter')
     api 'com.google.android.flexbox:flexbox:3.0.0'
