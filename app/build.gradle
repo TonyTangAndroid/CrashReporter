@@ -25,6 +25,7 @@ dependencies {
     })
     api 'androidx.appcompat:appcompat:1.3.0'
     testImplementation 'junit:junit:4.13.2'
-    api project(':crashreporter')
+//    api project(':crashreporter')
+    api project(':noop')
     api 'com.google.android.flexbox:flexbox:3.0.0'
 }

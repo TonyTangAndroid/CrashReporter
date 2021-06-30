@@ -1,1 +1,4 @@
-include ':app', ':crashreporter'
+include ':crashreporter'
+include ':noop'
+include ':app'
+

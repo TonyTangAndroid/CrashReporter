@@ -69,4 +69,8 @@ public class CrashReporter {
         isNotificationEnabled = false;
     }
 
+    public static void launch(Context context) {
+        Intent intent =  new Intent(context, CrashReporterActivity.class);
+        context.startActivity(intent);
+    }
 }

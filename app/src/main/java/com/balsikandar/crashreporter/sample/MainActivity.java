@@ -1,14 +1,10 @@
 package com.balsikandar.crashreporter.sample;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-
+import androidx.appcompat.app.AppCompatActivity;
 import com.balsikandar.crashreporter.CrashReporter;
-import com.balsikandar.crashreporter.ui.CrashReporterActivity;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,10 +71,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.crashLogActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =  new Intent(mContext, CrashReporterActivity.class);
-                startActivity(intent);
+                CrashReporter.launch(MainActivity.this.mContext);
             }
         });
 
     }
+
 }
