@@ -21,6 +21,15 @@ buildscript {
     ext.target_sdk_version = 30
 }
 
+
+
+plugins {
+    id "com.github.sherter.google-java-format" version "0.8"
+}
+
+apply from: "${rootDir}/config/google_java_format.gradle"
+
+
 allprojects {
     repositories {
         google()
