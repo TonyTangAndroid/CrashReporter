@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.balsikandar.crashreporter.sample'
     compileSdkVersion rootProject.ext.compile_sdk_version
+    buildToolsVersion rootProject.ext.build_tools_version
     defaultConfig {
         applicationId "com.balsikandar.crashreporter.sample"
         minSdkVersion rootProject.ext.min_sdk_version
@@ -10,9 +10,6 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-    }
-    buildFeatures {
-        buildConfig true
     }
     buildTypes {
         release {
