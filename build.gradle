@@ -3,6 +3,7 @@
 buildscript {
     repositories {
         google()
+        mavenCentral()
         //noinspection JcenterRepositoryObsolete
         jcenter()
         maven { url 'https://plugins.gradle.org/m2/' }
@@ -10,7 +11,6 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:4.2.1'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.4'
         //noinspection GradleDependency
         classpath 'gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.8'
     }
@@ -29,6 +29,8 @@ apply from: "${rootDir}/config/google_java_format.gradle"
 allprojects {
     repositories {
         google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
         //noinspection JcenterRepositoryObsolete
         jcenter()
     }

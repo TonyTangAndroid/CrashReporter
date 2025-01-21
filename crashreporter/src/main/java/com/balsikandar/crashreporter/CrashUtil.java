@@ -13,6 +13,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
+import com.tony.tang.safe.pending.intent.sdk.SafePendingIntent;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -109,7 +110,7 @@ class CrashUtil {
       intent.putExtra(Constants.LANDING, isCrash);
       intent.setAction(Long.toString(System.currentTimeMillis()));
 
-      PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+      PendingIntent pendingIntent = SafePendingIntent.getActivity(context, 0, intent, 0);
       builder.setContentIntent(pendingIntent);
 
       builder.setContentTitle(context.getString(R.string.view_crash_report));
